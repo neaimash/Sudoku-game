@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sudoku!</title>
+    <link rel = "icon" href =  "sudoku_logo.png" type = "image/x-icon"> 
+    <link href="sudoku.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="sudoku.js"></script>
+    <script language="javascript" type="text/javascript">  </script>
+</head>
+<body>
+    <nav class="app-bar">
+        <div class="bar-font title">Sudoku</div>
+        <div id="moreoption-sec" class="more-option-div more-button">
+            <button id="button_b" class="button bar-button">
+                <span>new Game</span>
+            </button>
+            <!-- it is important to put these styles in here because if I do not do that it will not work in javaScript-->
+            <div  id="more-option-list" style="visibility: hidden;max-height: 10px;max-width: 40px;min-width: 40px;" class="more-option-list">
+                <button id="level_1"  class="button nav-item vertical-adjust">level 1</button>
+                <button id="level_2"  class="button nav-item vertical-adjust">level 2</button>
+                <button id="level_3"  class="button nav-item vertical-adjust">level 3</button>
+            </div>
+        </div>
+        <button id="hint" class="button bar-button more-button">
+            <span id="pause-icon"></span>
+            <span id="pause-text">Hint</span>
+        </button>
+        <button id="restart"  class="button bar-button more-button">
+            <span id="pause-icon"></span>
+            <span id="pause-text">Restart</span>
+        </button>
+        <button id="pause" class="button bar-button more-button">
+            <span id="pause-icon"></span>
+            <span id="pause-text">Pause</span>
+        </button>
+        <button id="check" class="button bar-button more-button">
+            <span>Check</span>
+        </button>
+    </nav>
+    <div class="body" id="sudoku">
+        <div class="card game">
+            <table id="puzzle-grid">
+                <tr>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="1" onchange="checkInput(this)" disabled/>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="status">
+            <ul>
+                    <div class="vertical-adjust">
+                        <span id="timer-label">Timer</span>
+                    </div>
+                    <div id="timer" class="timer">00:00</div>
+            </ul> 
+        </div>
+    </div>
+    <div class="footer vertical-adjust">
+        <span>By Talia Friedman and Neima Shraga</span>
+        <span> . © 2021 all right reserved.</span>
+    </div>
+</body>
+</html>
